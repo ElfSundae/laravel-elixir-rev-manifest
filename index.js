@@ -22,8 +22,10 @@ Elixir.extend('revManifest', function(output) {
         var list = {};
 
         for (var key in manifest) {
-            var hash = manifest[key].match(/-([0-9a-f]{10})\./)[1];
-            list[key] = key + '?' + hash;
+            var match = manifest[key].match(/-([0-9a-f]{10})\./);
+            if (match) {
+                list[key] = match[1];
+            }
         }
 
         fs.writeFile(paths.output.path, JSON.stringify(list, null, 2), function(err) {

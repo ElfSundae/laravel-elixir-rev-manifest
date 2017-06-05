@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-rev-manifest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate revision manifest for Laravel Elixir.",
   "author": "Elf Sundae",
   "homepage": "https://github.com/ElfSundae/laravel-elixir-rev-manifest",
