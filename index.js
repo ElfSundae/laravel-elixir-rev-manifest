@@ -2,9 +2,9 @@
 
 const fs = require('fs');
 
-Elixir.extend('revManifest', function(output) {
+Elixir.extend('revManifest', function(output, src) {
     var paths = new Elixir.GulpPaths()
-        .src(Elixir.config.get('public.versioning.buildFolder') + '/rev-manifest.json')
+        .src(src || (Elixir.config.get('public.versioning.buildFolder') + '/rev-manifest.json'))
         .output(output || Elixir.config.publicPath + '/rev-manifest.json');
 
     new Elixir.Task('revManifest', function($) {

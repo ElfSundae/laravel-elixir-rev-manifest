@@ -25,10 +25,12 @@ elixir((mix) => {
 ## API
 
 ```
-revManifest([output])
+revManifest(output, src)
 ```
 
-The default output is `"public/rev-manifest.json"`
+The default `output` is `"{public}/rev-manifest.json"` which `{public}` is `elixir.config.publicPath` .
+
+The default `src` is `"{public/build}/rev-manifest.json"` which `{public/build}` is the second parameter of `version(src, buildPath)` .
 
 ## License
 
